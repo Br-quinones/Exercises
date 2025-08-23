@@ -4,7 +4,7 @@ Con esos dos datos, el programa debe calcular cu√°nto dinero es la propina y cu√
 """
 
 bill = float(input("Cual fue el total de su cuenta: "))
-tip = float(input("Cuanta propina desea dejar(15, 18, 20...): ")) 
+tip = float(input("Cuanto porcentaje de propina desea dejar(15, 20...): ")) 
 
 total_tip = (tip * 1/100) * bill
 total_bill = total_tip + bill
@@ -12,4 +12,4 @@ total_bill = total_tip + bill
 print(f"propina es: {total_tip:.2f}")
 print(f"total a pagar es: {total_bill:.2f}")
 
-#20 minutos
+#20 minutes
