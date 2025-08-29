@@ -1,6 +1,6 @@
 """
-Crear un programa para gestionar las notas de una clase. La información se guardará en una lista principal llamada alumnos. Cada elemento de esta lista será un diccionario que representa a un solo alumno.
-Cada diccionario de alumno debe tener dos claves:
+Crear un programa para gestionar las notas de una clase. La información se guardará en una lista principal llamada alumnos. Cada elemento de esta lista será un dictionary que representa a un solo alumno.
+Cada dictionary de alumno debe tener dos claves:
 "nombre": El nombre del alumno (un string).
 "notas": Una lista con todas las notas de ese alumno (números).
 Tu programa debe mostrar un menú con las siguientes opciones:
@@ -14,7 +14,7 @@ import os
 import sys 
 import msvcrt
 
-diccionario = {}
+dictionary = {}
 
 def add_student():
     os.system("cls")
@@ -22,13 +22,13 @@ def add_student():
     print("----------------------------------")
     new_student = input("Nombre del nuevo alumno: ").lower().rstrip().lstrip()
     print("----------------------------------")
-    print("Alumno agregado, presione una tecla para continuar")
+    print("Presione una tecla para continuar")
     msvcrt.getch()
 
     return new_student
 
 def add_score():
-    global diccionario
+    global dictionary
 
     try:
         os.system("cls")
@@ -36,9 +36,9 @@ def add_score():
         print("----------------------------------")
         for_which_student = input("¿Para qué alumno?: ").lower().rstrip().lstrip()
 
-        if for_which_student in diccionario:
+        if for_which_student in dictionary:
             variable = float(input("Introduzca su nota: "))
-            diccionario[for_which_student].append(variable)
+            dictionary[for_which_student].append(variable)
             print("----------------------------------")
         else:
             print("----------------------------------")
@@ -49,25 +49,25 @@ def add_score():
         msvcrt.getch()
 
     except:
-        print("Porfavor introduzca un numero en la nota.")
+        print("Por favor introduzca un numero en la nota.")
 
 def see_student():
     os.system("cls")
 
     print("--- Calificaciones de la Clase ---")
-    for name in list(diccionario.keys()):
+    for name in list(dictionary.keys()):
         print(f"-Alumno: {name}")
 
-        print(f"Notas: {diccionario[name]}")
+        print(f"Notas: {dictionary[name]}")
 
-        if len(diccionario[name]) == 0:
+        if len(dictionary[name]) == 0:
             print("Promedio: 0")
         else:
-            print(f"Promedio: {sum(diccionario[name]) / len(diccionario[name])}")
+            print(f"Promedio: {sum(dictionary[name]) / len(dictionary[name])}")
 
         print("----------------------------------")
 
-    print("Presione una tecla para continuar")
+    print("Presione una tecla para continuar.")
     msvcrt.getch()
 
 while True:
@@ -83,7 +83,7 @@ while True:
     key = msvcrt.getch().decode("latin-1")
 
     if key == "1":
-        diccionario[add_student()] = []
+        dictionary[add_student()] = []
     elif key == "2":
         add_score()
     elif key == "3":
