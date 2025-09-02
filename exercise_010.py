@@ -81,4 +81,4 @@ while True:
 
     msvcrt.getch()
 
-    #01:10:27
+    #01:10:27 minutos
