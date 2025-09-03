@@ -36,7 +36,7 @@ for names in list_of_students:
     print("------------------------------")
     number_list += 1
 
-print("Presione cualquier letra para salir")
+print("Presione cualquier tecla para salir.")
 msvcrt.getch()
 
 #01:01:46 minutos
