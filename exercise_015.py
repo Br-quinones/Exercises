@@ -29,3 +29,5 @@ print(f"El segundo número mas grande es: {second_largest_number(numerical_list)
 print("------------------------------")
 print("Presione una tecla para salir.")
 msvcrt.getch()
+
+#44:57 minutos
