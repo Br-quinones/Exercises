@@ -1,7 +1,7 @@
 # En un matriz grafica un personaje que se mueve dentro de ella.
 
 import msvcrt
-import os
+import sys 
 from colorama import Fore
 
 def make_matrix(row,column,number):
@@ -19,16 +19,19 @@ def make_matrix(row,column,number):
 
 matrix_01 = make_matrix(15,90,".")
 
+
 coordenada_y = 0
 coordenada_x = 0
 
+player_ascci = Fore.CYAN + "@" + Fore.RESET
+
 while True:
-    os.system("cls")
+    print("\033[2J\033[H]", end="", flush=True)
     
     for line in matrix_01:
         for signo in line:
-            print(signo, end="")
-        print(" ")
+            sys.stdout.write(signo)
+        sys.stdout.write("\n")
 
     matrix_01[coordenada_y][coordenada_x] = "." 
 
@@ -43,11 +46,6 @@ while True:
     if key == "w":
         coordenada_y -= 1
 
-    matrix_01[coordenada_y][coordenada_x] = Fore.RED + "@" + Fore.RESET
+    matrix_01[coordenada_y][coordenada_x] = player_ascci
 
-    
-
-
-
-
-
+# 45 minutos
