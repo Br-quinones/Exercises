@@ -10,17 +10,17 @@ class BankAccount:
 
     def deposit(self, amount):
         self.balance = self.balance + amount
-        print(f"Deposito exitoso. Nuevo saldo: {self.balance}")
+        print(f"Deposito exitoso de ${amount}")
 
     def withdraw(self, amount):
         self.balance = self.balance - amount
-        print(f"Retiro exitoso. Nuevo saldo: {self.balance}")
+        print(f"Retiro exitoso de ${amount}")
 
 # Creamos cuenta
 account_01 = BankAccount("Fulano",500)
 
 # Verificamos a que banco pertence
-print(f"Estas cuentas pertence al banco: {BankAccount.bank_name}")
+print(f"Esta cuenta pertence al banco: {BankAccount.bank_name}")
 
 # Imprimimos el __str__
 print(account_01)
@@ -30,5 +30,8 @@ account_01.deposit(100)
 
 # Retiramos 240 $
 account_01.withdraw(250)
+
+# Imprimimos el __str__
+print(account_01)
 
 # 47 minutos
