@@ -23,3 +23,5 @@ class Teacher(SchoolMember):
 
     def teach(self):
         print(f"{self.name} is teaching {self.subject}")
+
+# 50 minutes
